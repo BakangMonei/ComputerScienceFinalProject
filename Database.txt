@@ -1,0 +1,108 @@
+CREATE TABLE `admin` (
+  `id` int NOT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(95) DEFAULT NULL,
+  `email` varchar(95) DEFAULT NULL,
+  `username` varchar(95) DEFAULT NULL,
+  `password` varchar(95) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `adminmarks` (
+  `email` varchar(45) NOT NULL,
+  `id` varchar(45) NOT NULL,
+  `subject1` varchar(45) NOT NULL,
+  `mark1` int NOT NULL,
+  `subject2` varchar(45) NOT NULL,
+  `mark2` int NOT NULL,
+  `subject3` varchar(45) NOT NULL,
+  `mark3` int NOT NULL,
+  `subject4` varchar(45) NOT NULL,
+  `mark4` int NOT NULL,
+  `subject5` varchar(45) NOT NULL,
+  `mark5` int NOT NULL,
+  `subject6` varchar(45) NOT NULL,
+  `mark6` int NOT NULL,
+  `subject7` varchar(45) NOT NULL,
+  `mark7` int NOT NULL,
+  `subject8` varchar(45) NOT NULL,
+  `mark8` int NOT NULL,
+  `totalmarks` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `course` (
+  `id` int NOT NULL,
+  `courseName` varchar(45) DEFAULT NULL,
+  `institute` varchar(45) DEFAULT NULL,
+  `yop` varchar(95) DEFAULT NULL,
+  `rate` double DEFAULT NULL,
+  `imgurl` varchar(145) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `employee` (
+  `id` int NOT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `rating` (
+  `studentid` int NOT NULL,
+  `programid` int DEFAULT NULL,
+  `rate` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `student` (
+  `id` int NOT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `option1` varchar(45) DEFAULT NULL,
+  `option2` varchar(45) DEFAULT NULL,
+  `option3` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `stumarks` (
+  `email` varchar(45) NOT NULL,
+  `id` varchar(45) NOT NULL,
+  `subject1` varchar(45) NOT NULL,
+  `mark1` int NOT NULL,
+  `subject2` varchar(45) NOT NULL,
+  `mark2` int NOT NULL,
+  `subject3` varchar(45) NOT NULL,
+  `mark3` int NOT NULL,
+  `subject4` varchar(45) NOT NULL,
+  `mark4` int NOT NULL,
+  `subject5` varchar(45) NOT NULL,
+  `mark5` int NOT NULL,
+  `subject6` varchar(45) NOT NULL,
+  `mark6` int NOT NULL,
+  `subject7` varchar(45) NOT NULL,
+  `mark7` int NOT NULL,
+  `subject8` varchar(45) NOT NULL,
+  `mark8` int NOT NULL,
+  PRIMARY KEY (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `universities` (
+  `id` int NOT NULL,
+  `universityName` varchar(45) DEFAULT NULL,
+  `Location` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+select * from student;
+select * from employee;
+select * from stumarks;
+select * from universities;
